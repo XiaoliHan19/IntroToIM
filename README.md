@@ -1,10 +1,13 @@
 # IntroToIM
 
 ##0907 Assignment##
+
 //Self Protrait
 
 void setup(){
+
   size (500, 500);
+  
 }
 
 void draw(){
@@ -12,46 +15,80 @@ void draw(){
   background(255, 200, 70);
   
   //use mouseX and mouseY to draw a small ellipse 
+  
   ellipse (mouseX, mouseY, 100, 35);
+  
   println("mouse coordinates = " + mouseX +"," + mouseY);
+  
   
   //use mouseX and mouseY to draw a small circle 
+  
   circle (mouseX, mouseY, 50);
+  
   println("mouse coordinates = " + mouseX +"," + mouseY);
+  
   
   //use mouseX and mouseY to draw a small triangle
+  
   triangle (mouseX, mouseY, mouseX, mouseY, mouseX, mouseY);
+  
   println("mouse coordinates = " + mouseX +"," + mouseY);
   
+  
   //draw eye glasses and eye shadows
+  
   fill(100,10,25);
+  
   arc(100, 100, 100, 100, 0, PI, CHORD);
+  
 
   {
+  
     noStroke();
+    
     int ellipseTopLeftX = 150;
+    
     fill(255, 255, 255);
+    
     ellipse (ellipseTopLeftX, ellipseTopLeftX, 150, 50);
+    
   }
   
+  
   {
+  
     int circleTopLeftX = 150;
+    
     fill(0,10,10);
+    
     circle (circleTopLeftX, circleTopLeftX, 45);
+    
   }
+  
 
   {
+  
     noStroke();
+    
     int ellipseTopRightX = 345;
+    
     fill(255, 255, 255);
+    
     ellipse (ellipseTopRightX, ellipseTopRightX-125, 150, 50);
+    
   }
+  
 
   {
+  
     int circleTopRightX = 345;
+    
     fill(0,10,10);
+    
     circle (circleTopRightX, circleTopRightX-125, 45);
+    
   }
+
 
   {
     noStroke();
