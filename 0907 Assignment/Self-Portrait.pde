@@ -4,7 +4,8 @@ Since this is my first attempt on coding, I spent quite amount of time exploring
 the shapes and colors that I liked, which composed the final portrait. 
 
 A majority of my work in this assignment is trying to find the correct coordinates and colors for different shapes. But it's also a fun process becasue sometimes I
-got unexpected results. What I still need to look into is to learn to draw curves of the right degrees. 
+got unexpected results. What I still need to look into is to learn to draw curves of the right degrees. I found it quite hard in the beginning, but it gets better as
+I tried more. But eventually I still prefer to draw with different shapes.
 
 Following is the code:
 
