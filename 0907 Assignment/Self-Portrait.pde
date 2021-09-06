@@ -1,5 +1,13 @@
 //Self Protrait
 
+Since this is my first attempt on coding, I spent quite amount of time exploring the software before actually starting to draw. As I was trying new fuctions, I kept 
+the shapes and colors that I liked, which composed the final portrait. 
+
+A majority of my work in this assignment is trying to find the correct coordinates and colors for different shapes. But it's also a fun process becasue sometimes I
+got unexpected results. What I still need to look into is to learn to draw curves of the right degrees. 
+
+Following is the code:
+
 void setup(){
   size (500, 500);
 }
