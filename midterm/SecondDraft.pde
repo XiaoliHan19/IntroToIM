@@ -47,12 +47,6 @@ void setup() {
 
   noStroke();
   fill(255, 204);
-
-  //for (Barrier barrier : barriers) {
-  //  barrier.collide();
-  //  barrier.move();
-  //  barrier.display();
-  //}
 }
 
 void draw() {
