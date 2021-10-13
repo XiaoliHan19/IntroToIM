@@ -177,12 +177,10 @@ void draw() {
     void BirdCollidesBarrier() {
     if (mouseX - diameter < diameter) {
       currentPage = 3;
-      return;
     }
     
     if (mouseX > 1200) {
       currentPage = 4;
-      return;
     }
   }
 }
