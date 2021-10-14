@@ -95,25 +95,6 @@ void draw() {
       barrier.display();
     }
 
-    //page3
-    if (currentPage == 3) {
-      background(252, 212, 64);
-      fill(44, 198, 42);
-      textFont(letterAvenir);
-      textAlign(CENTER);
-      text(win, width/2, 350);
-      text(restart, width/2, 450);
-    }
-
-    //page4
-    if (currentPage == 4) {
-      background(252, 212, 64);
-      fill(44, 198, 42);
-      textFont(letterAvenir);
-      textAlign(CENTER);
-      text(lost, width/2, 350);
-      text(restart, width/2, 450);
-    }
     class Barrier {
 
     float w, z;
@@ -181,6 +162,26 @@ void draw() {
     
     if (mouseX > 1200) {
       currentPage = 4;
+    }
+    
+     //page3
+    if (currentPage == 3) {
+      background(252, 212, 64);
+      fill(44, 198, 42);
+      textFont(letterAvenir);
+      textAlign(CENTER);
+      text(win, width/2, 350);
+      text(restart, width/2, 450);
+    }
+
+    //page4
+    if (currentPage == 4) {
+      background(252, 212, 64);
+      fill(44, 198, 42);
+      textFont(letterAvenir);
+      textAlign(CENTER);
+      text(lost, width/2, 350);
+      text(restart, width/2, 450);
     }
   }
 }
