@@ -6,6 +6,7 @@ PFont letterAvenir; //text font setup
 int currentPage = 0;
 PImage bird;
 boolean start = true;
+//game.play;
 
 //page 1: guide
 String guide1 = "Lead the bird to the end of the screen.";
@@ -13,13 +14,12 @@ String guide2 = "Be careful: the barriers can move! [C]";
 boolean next = true;
 
 //page 2: game
-int numBarriers = 40; // set up the barriers in the game
+int numBarriers = 20; // set up the barriers in the game
 float spring = 0.05;
 float gravity = 0;
 float friction = -0.1;
 Barrier[] barriers = new Barrier[numBarriers];
 boolean dead = false;
-//boolean start = true;
 
 
 float x;//Class Bird: when moving the mouse across the screen, the bird will follow
@@ -30,6 +30,14 @@ float easing = 0.1;
 String win = "CONGRATS!";
 String lost = "END";
 String restart = "Restart [R]";
+
+//
+float w, z;
+float diameter;
+float vw = 10;
+float vz = 10;
+int id;
+Barrier[] others;
 
 
 void setup() {
@@ -42,7 +50,6 @@ void setup() {
   game = new SoundFile(this, "game.mp3");
 
   //page 2: bouncy barriers
-
   for (int i = 0; i < numBarriers; i++) {
     barriers[i] = new Barrier( random(width), random(height), random(30, 70), i, barriers);
   }
@@ -50,6 +57,7 @@ void setup() {
   noStroke();
   fill(255, 204);
 }
+
 
 void draw() {
   //page 0
@@ -85,9 +93,10 @@ void draw() {
       barrier.collide();
       barrier.move();
       barrier.display();
+      barrier.collision();
     }
 
-    if (mouseX > 1000) {
+    if (mouseX > 1100) {
       currentPage = 4;
       return;
     }
@@ -119,8 +128,8 @@ class Barrier {
 
   float w, z;
   float diameter;
-  float vw = 10;
-  float vz = 10;
+  float vw = 5;
+  float vz = 5;
   int id;
   Barrier[] others;
 
@@ -176,9 +185,11 @@ class Barrier {
     ellipse(w, z, diameter, diameter);
   }
 
-  void BirdCollidesBarrier() {
+  void collision() {
     if (dist(mouseX-70, mouseY-70, w, z)< 70+diameter) {
-      currentPage = 4;
+      currentPage = 3;
+      println(dist(mouseX-70, mouseY-70, w, z));
+      println(70+diameter);
       return;
     }
   }
