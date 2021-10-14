@@ -25,8 +25,7 @@ I tried to run the first draft and found many problems:
 It would be so much easier to be organized from the beginning.
 -
 
-Reference:
+*Reference:*
 
-https://processing.org/examples/bouncybubbles.html
-
-https://processing.org/examples/easing.html
+- https://processing.org/examples/bouncybubbles.html
+- https://processing.org/examples/easing.html
