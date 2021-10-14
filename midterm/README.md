@@ -9,7 +9,7 @@ more bouncy.
 
 **Second Draft:**
 I tried to run the first draft and found many problems: 
-1. Processing kept saying there is no class for barrier while there actually is ➡️ the class was included within void.draw, specifdically within page 2, but the function shouldn't be limited to one page, especially we want the bird and barriers to interact with each other. So I took the class out as global - the same as void.setup and void.draw.
+1. Processing kept saying there is no class for barrier while there actually is ➡️ the class was included within void.draw, specifdically within page 2, but the function shouldn't be limited to one page, especially we want the bird and barriers to interact with each other. So I took the class out as global - the same as void.setup and void.draw. Same thing applies to keyReleased.
 2. Neither the bird nor barriers is moving the first time I ran it ➡️ I tried to use println to find out why. Turned out the velocity is too slow.
 3. After these two can move, they can't hit each other, which means the game cannot finish. I can't test the rest of the game (result page + restart) ➡️ still trying to figure out.
 4. The music is not on for the whole game ➡️ Still don't know the reason. I tried a shorter audio but it didn't work.
