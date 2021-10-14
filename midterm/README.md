@@ -11,7 +11,7 @@ more bouncy.
 I tried to run the first draft and found many problems: 
 1. Processing kept saying there is no class for barrier while there actually is ➡️ the class was included within void.draw, specifically ertyuikjbvcdsedcvbnjkol,mnb
 2. Neither the bird nor barriers is moving the first time I ran it ➡️
-3. After these two can move, they can't hit each other, which means the game cannot finish. I can't test the rest of the game (result page + restart) ➡️
+3. After these two can move, they can't hit each other, which means the game cannot finish. I can't test the rest of the game (result page + restart) ➡️ booleans
 4. The music is not on for the whole game ➡️
 
 **Final Draft:**
@@ -20,7 +20,7 @@ I tried to run the first draft and found many problems:
 - gfu
 
 *Challenge:*
-- One of the challenge in making the game comes from the barriers. I need to look into the sine/cosine/some other equations, which is quite confusing.
+- One of the challenge in making the game comes from the barriers. I need to look into the sine/cosine/some other equations, which is quite confusing. I asked my cs-major friends on this part. It was helpful.
 - My working process is to throw everything on the processing first and then rearrange them. I had a hard time re-organizing because the codes looked very messy.
 It would be so much easier to be organized from the beginning.
 -
