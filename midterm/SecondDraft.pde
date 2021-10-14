@@ -87,7 +87,6 @@ void draw() {
     image(bird, birdX, birdY, bird.width/2, bird.height/2);
 
     //set up bouncy barriers
-    //background(252, 212, 64);
     for (Barrier barrier : barriers) {
       barrier.collide();
       barrier.move();
