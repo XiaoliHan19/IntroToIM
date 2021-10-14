@@ -31,14 +31,6 @@ String win = "CONGRATS!";
 String lost = "END";
 String restart = "Restart [R]";
 
-//
-float w, z;
-float diameter;
-float vw = 10;
-float vz = 10;
-int id;
-Barrier[] others;
-
 
 void setup() {
   //page 0
