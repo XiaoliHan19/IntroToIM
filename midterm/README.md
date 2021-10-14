@@ -24,3 +24,7 @@ I tried to run the first draft and found many problems:
 - My working process is to throw everything on the processing first and then rearrange them. I had a hard time re-organizing because the codes looked very messy.
 It would be so much easier to be organized from the beginning.
 -
+
+Reference:
+https://processing.org/examples/bouncybubbles.html
+https://processing.org/examples/easing.html
