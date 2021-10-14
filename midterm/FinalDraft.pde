@@ -177,9 +177,7 @@ class Barrier {
   }
 
   void BirdCollidesBarrier() {
-    float d = dist(mouseX, mouseY, w, z); 
-    float minDist = 70 + diameter/2;
-    if (d == minDist) {
+    if (dist(mouseX-70, mouseY-70, w, z)< 70+diameter) {
       currentPage = 4;
       return;
     }
