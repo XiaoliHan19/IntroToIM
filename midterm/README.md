@@ -18,7 +18,10 @@ I tried to run the first draft and found many problems:
 I understood why the bird cannot collide with barriers - it wasn't stated outside the class so the function couldn't work. I also clean up some useless codes. I also figured out a few problem in logic of the code (mentioned in the thrid bullet point under *Challenge*) and solved them.
 
 *Learned:*
-- gfu
+- How to change pages on processing (it's quite useful!)
+- Some physics :/
+- Need to remember to put some functions parrallel with each other rather than built-in
+- Going over the code again and again or just going over with a friend really helps to understand it better
 
 *Challenge:*
 - One of the challenge in making the game comes from the barriers. I need to look into the sine/cosine/some other equations, which is quite confusing. I asked my cs-major friends on this part. It was helpful.
