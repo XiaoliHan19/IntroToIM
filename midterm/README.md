@@ -12,9 +12,10 @@ I tried to run the first draft and found many problems:
 1. Processing kept saying there is no class for barrier while there actually is ➡️ the class was included within void.draw, specifdically within page 2, but the function shouldn't be limited to one page, especially we want the bird and barriers to interact with each other. So I took the class out as global - the same as void.setup and void.draw. Same thing applies to keyReleased.
 2. Neither the bird nor barriers is moving the first time I ran it ➡️ I tried to use println to find out why. Turned out the velocity is too slow.
 3. After these two can move, they can't hit each other, which means the game cannot finish. I can't test the rest of the game (result page + restart) ➡️ still trying to figure out.
-4. The music is not on for the whole game ➡️ Still don't know the reason. I tried a shorter audio but it didn't work.
+4. The music is not on for the whole game ➡️ it's loading all the time.
 
 **Final Draft:**
+I understood why the bird cannot collide with barriers - it wasn't stated outside the class so the function couldn't work.
 
 *Learned:*
 - gfu
@@ -23,7 +24,8 @@ I tried to run the first draft and found many problems:
 - One of the challenge in making the game comes from the barriers. I need to look into the sine/cosine/some other equations, which is quite confusing. I asked my cs-major friends on this part. It was helpful.
 - My working process is to throw everything on the processing first and then rearrange them. I had a hard time re-organizing because the codes looked very messy.
 It would be so much easier to be organized from the beginning.
--
+- The biggest drawback of the code is the logic -- the bird's position is controlled by the mouse -- if the user put their mouse on the right side of the screen, they would win the game wihtout even playing it. Same thing applies to who accidently put their mouse on the same position of a random barrier -- then they lose the 
+game withtout playing. To improve, I'll try to set a starting point for the bird so it won't overlap with the barriers at the beginning of the game. 
 
 *Reference:*
 
