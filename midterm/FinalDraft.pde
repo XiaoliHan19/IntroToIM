@@ -10,11 +10,12 @@ boolean start = true;
 
 //page 1: guide
 String guide1 = "Lead the bird to the end of the screen.";
-String guide2 = "Be careful: the barriers can move! [C]";
+String guide2 = "Be careful: the barriers can move!";
+String guide3 = "Now put your mouse on the bird and press [C] to start!";
 boolean next = true;
 
 //page 2: game
-int numBarriers = 20; // set up the barriers in the game
+int numBarriers = 40; // set up the barriers in the game
 float spring = 0.05;
 float gravity = 0;
 float friction = -0.1;
@@ -31,7 +32,6 @@ String win = "CONGRATS!";
 String lost = "END";
 String restart = "Restart [R]";
 
-
 void setup() {
   //page 0
   size (1200, 800);
@@ -43,7 +43,7 @@ void setup() {
 
   //page 2: bouncy barriers
   for (int i = 0; i < numBarriers; i++) {
-    barriers[i] = new Barrier( random(width), random(height), random(30, 70), i, barriers);
+    barriers[i] = new Barrier( random(1000,1200), random(height), random(30, 70), i, barriers);
   }
 
   noStroke();
@@ -55,7 +55,7 @@ void draw() {
   //page 0
   textFont(letterAvenir, 300);
   fill(255, 153, 0);
-  text("BIRD", 300, 450);
+  text("KEYI", 350, 450);
 
   textFont(letterAvenir, 68);
   fill(44, 198, 42);
@@ -71,6 +71,8 @@ void draw() {
     textAlign(CENTER);
     text(guide1, width/2, 350);
     text(guide2, width/2, 450);
+    text(guide3, width/2, 550);
+    image(bird, 0, height/2, bird.width/2, bird.height/2);
   }
 
   //page2
@@ -78,9 +80,12 @@ void draw() {
     background(252, 212, 64);
 
     //set up bird
+
     image(bird, mouseX-70, mouseY-70, 140, 140);
 
     //set up bouncy barriers
+  
+    
     for (Barrier barrier : barriers) {
       barrier.collide();
       barrier.move();
@@ -178,7 +183,7 @@ class Barrier {
   }
 
   void collision() {
-    if (dist(mouseX-70, mouseY-70, w, z)< 70+diameter) {
+    if (dist(mouseX-70, mouseY-70, w, z)< 70+diameter/2) {
       currentPage = 3;
       println(dist(mouseX-70, mouseY-70, w, z));
       println(70+diameter);
@@ -190,14 +195,17 @@ class Barrier {
 void keyReleased() {
   if (currentPage == 0 && key == 's') {
     currentPage = 1;
-  } else if (currentPage == 1 && key == 'c') {
+  } else if (currentPage == 1 && key == 'c' && mouseX <= 140 && height/2-70 <= mouseY && mouseY <= height/2+70) {
+    setup();
     currentPage = 2;
   } else if (currentPage == 4 && key == 'r') {
     start = true;
+    setup();
     currentPage = 0;
     return;
   } else if (currentPage == 3 && key == 'r') {
     start = true;
+    setup();
     currentPage = 0;
     return;
   }
