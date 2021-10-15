@@ -11,7 +11,7 @@ boolean start = true;
 //page 1: guide
 String guide1 = "Lead the bird to the end of the screen.";
 String guide2 = "Be careful: the barriers can move!";
-String guide3 = "Now put your mouse on the bird and press [C] to start!";
+String guide3 = "Now put your mouse on the bird and press [c] to start!";
 boolean next = true;
 
 //page 2: game
