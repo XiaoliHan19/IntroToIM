@@ -1,10 +1,10 @@
 **Unusual Switch**
 
-For this assignment, I was inspired when trying to take one tea bag from the tea box -- When the tea box is closed, the light is blue, indicating the switch is on; while yellow light means tea box is open, therefore the switch is off. By looking at the color of the LED light, one can tell if any tea bag is taken. For the materials, I went to IM Lab to pick up some copper tapes and stuck wires to the tea box. 
+For this assignment, I was inspired when trying to take one tea bag from the tea box -- When the tea box is closed, the light is blue, indicating the switch is on; while yellow light means tea box is open, therefore the switch is off. By looking at the color of the LED light, one can tell if any tea bag is taken. For the materials, I went to IM Lab to pick up some copper tapes that could stick wires to the tea box. 
 
 <img width="681" alt="SwitchOff" src="https://user-images.githubusercontent.com/89835320/140259347-40c5b443-7a4c-4847-8d08-6f0f8025d67d.png">(This was wrong)
 
-However, only the yellow light is on, meaning the switch is off. I first considered the possibility that if my materials were not conductive enough. So I wrapped them with more aluminum foil. But the switch is still not on. Maybe it's the problem of the curcuit. I went over the notes and looked at the circuit again. I found out that there are some redundant meaningless wire. So this time I tried to draw the schematics first.
+The picture above shows how I initially built the circuit. As I tried to run it, only the yellow light is on, meaning the switch is off. I first considered the possibility that if my materials were not conductive enough. So I wrapped them with more aluminum foil. But the switch is still not on. Maybe it's the problem of the curcuit. In fact, the yellow light was on had nothing to do with the switch being off. The whole thing was wrong. I went over the notes, looked at the circuit again, and found out that there are some redundant meaningless wires. So this time I tried to draw the schematics first.
 
 <img width="440" alt="截屏2021-11-04 下午9 50 29" src="https://user-images.githubusercontent.com/89835320/140392736-07f8fd49-bb99-494c-a683-7efc280e2eb6.png">
 
@@ -22,7 +22,7 @@ Here are two pictures demonstrating how it works:
 
 *Challenge*
 
-- I ended up spent more time debugging than building my circuit. If I could draw schematics before building the circuit, that will probably save some times. 
-- There is one problem that still yet to solve until the end -- it takes noticely long time for LED lights to change color. At first I thought maybe the material is not conductive enough. Actually there are still space between two copper tape so that might be one reason. I have to press the box tightly. But in a few cases where they tightly clung to each other, it was still not smart enough to sense that. I'll have to keep looking into that.
+- I ended up spending more time debugging than building my circuit. If I could draw schematics in the first place, that will probably save some times. 
+- There is one problem that still yet to be solved -- it takes noticely long time for LED lights to change color. At first I thought maybe the material is not conductive enough. Actually there are still space between two copper tape so that might be one reason. I have to press the box tightly. But in a few cases where they tightly clung to each other, it was still not smart enough to sense that. I'll have to keep looking into that.
 
 
