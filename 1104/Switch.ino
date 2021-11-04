@@ -1,4 +1,4 @@
-const int LEDSwitch = A0;
+const int LEDSwitch = A5;
 const int bluePin = 13;
 const int yellowPin = 12;
 
@@ -16,9 +16,8 @@ void loop() {
     digitalWrite(bluePin, HIGH);
     digitalWrite(yellowPin, LOW);
   }
-  else {
+  else if (LEDState == LOW) {
     digitalWrite(bluePin, LOW);
     digitalWrite(yellowPin, HIGH);
   }
 }
-
