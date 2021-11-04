@@ -7,4 +7,7 @@ before taking any tea bag, the switch is on so is the blue light becasue two end
 
 
 *Challenge*
+
 I ended up spent more time debugging than building my circuit. One of the biggest challenge I had is that in the beginning only the yellow light is on, meaning the switch is. I first considered the possibility that if my materials were not conductive enough. So I wrapped them with more aluminum foil. But the switch is still not on. 
+
+*What I've Learned*
