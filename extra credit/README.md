@@ -17,6 +17,7 @@ I designed a keyboard with 10 notes from "C" to "E", which are enough for many s
 *Challenge:*
 
 *Learned:*
+- It's probably much easier to play if I just used 10 buttons representing different notes. As you can see in the video, locating the right key by turning potentiometer was not quite user-friendly for the majority of time. But 
 
 
 
