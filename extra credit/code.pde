@@ -19,7 +19,7 @@ void draw_all_piano() {
   fill(163,208,234);
   //ten keys for piano keys C~G, A~D
   for (int j=0; j<10; j++) rect(j*80, 0, 80, 240);
-  fill(255,247,95);
+  fill(238,247,142);
   for (int j=0; j<9; j++) {
     if (j==2 || j==6) continue;
     rect(56+j*80, 0, 48, 160);
