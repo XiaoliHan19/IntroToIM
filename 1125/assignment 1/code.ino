@@ -1,5 +1,5 @@
-char val;
-int LED = 12;
+char val;//data received from the serial port
+int LED = 12;//set the pin to digital I/O 12
 
 void setup() {
   pinMode(LED, OUTPUT);
@@ -7,8 +7,8 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available()) {
-    val = Serial.read();
+  if (Serial.available()) {//if data is available to read
+    val = Serial.read();//read & stored in val
   }
   if (val == '1') {
     digitalWrite(LED, HIGH);
