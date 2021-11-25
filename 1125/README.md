@@ -1,4 +1,4 @@
-***1125 PrRODUCTIONS***
+**1125 PrRODUCTIONS**
 - 
 1. Make something that uses only one sensor on Arduino and makes the ellipse in Processing move on the horizontal axis, in the middle of the screen, and nothing on Arduino is controlled by Processing
 2. Make something that controls the LED brightness from Processing
