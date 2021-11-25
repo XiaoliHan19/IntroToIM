@@ -16,8 +16,13 @@ The schematics looks like:
 
 Every time I click the mouse on the canvas, the LED will light up.
 
-You can see the whole video here
+You can see the whole video here: 
+
+https://user-images.githubusercontent.com/89835320/143389253-b3a85943-e97d-45f5-9aa5-2026cb0083f3.MOV
+
+
 
 
 
 ***THING 3:***
+
