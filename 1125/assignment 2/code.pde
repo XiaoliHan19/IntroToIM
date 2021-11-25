@@ -14,6 +14,7 @@ void draw() {
   if (mousePressed == true) {
     myPort.write ('1');
     println("1");
+    background(255);
   }
   else {
     myPort.write ('0');
