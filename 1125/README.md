@@ -8,13 +8,22 @@
 
 I drew a simple schematics that looks like:
 
+<img width="451" alt="schematic - 1" src="https://user-images.githubusercontent.com/89835320/143390350-09a6b147-8516-4a63-bbe2-3ee0ba7102c1.png">
+
+As I switch the potentiomenter back and forth, the ellipse in processing will move to left or right accordingly.
+
+You can see the whole video here:
+
+
+
+
 ***THING 2:***
 
 The schematics looks like:
 
 <img width="427" alt="schematics - 1" src="https://user-images.githubusercontent.com/89835320/143388500-f4c339bb-786d-4f0e-af54-916cfca2ab55.png">
 
-Every time I click the mouse on the canvas, the LED will light up.
+Every time I click the mouse on the canvas, the LED lights up, so does the canvas.
 
 You can see the whole video here: 
 
