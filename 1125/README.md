@@ -13,6 +13,7 @@ I drew a simple schematics that looks like:
 As I switch the potentiomenter back and forth, the ellipse in processing will move to left or right accordingly.
 
 You can see the whole video here:
+https://drive.google.com/file/d/1E8waNJKqOF_nhDZBRqmVpfYvUCdkLS8q/view?usp=sharing
 
 
 
