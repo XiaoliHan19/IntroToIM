@@ -10,7 +10,7 @@ For the final project I want to make an installation that use human fingers as k
 
 I gave up the idea of making a human instrument becasue to enable people to move their fingers freely while staying connected with arduino I need to soldering really long wires. And the workload for soldering 20 long wires is huge. What's more, I was worried that it wouldn't be strong enough. On the other hand, becasue there are too many wires attached to the gloves, participants might not able to move their hands freely anyway. If they move their fingers back and forth, the wires might become entangled. To sum up, this idea might not be feasible to put into practice.
 
-karaoke machine.
+So I came up with a new idea of making a karaoke machine.
 
 **2. Description of Arduino**
 
