@@ -11,6 +11,7 @@ boolean start = true;
 PFont letterAvenir; //text font setup
 int currentPage = 0;
 PImage karaoke;
+PImage disco;
 boolean SING = true;
 //karaoke.start;
 
@@ -43,6 +44,7 @@ void setup() {
   printArray(PFont.list());
   letterAvenir = loadFont("AvenirNextCondensed-HeavyItalic-48.vlw");
   karaoke = loadImage("karaoke.jpg");
+  disco = loadImage("disco.png");
 
   //page 1
   cali = loadImage("cali.jpg");
@@ -50,46 +52,67 @@ void setup() {
   seashell = loadImage("seashell.png");
 
   //page 2
-  background(10, 10, 200);
+  background(0);
   movie1 = new Movie(this, "California Dreamin'.mp4");// Initialize Movie object
-  //movie1.loop();
 
   //page 3
   background(0);
   movie2 = new Movie(this, "Blinding Lights.mp4");// Initialize Movie object
-  //movie2.loop();
 
   //page 4
-  background(122, 121, 200);
+  background(0);
   movie3 = new Movie(this, "XMAS.mp4");// Initialize Movie object
-  //movie3.loop();
 }
 
 void draw() {
   //page 0
-  image(karaoke, 0, 0, 1200, 720);
+  image(karaoke, 0, 0, 1440, 845);
+  image(disco, 1050, 100, 200, 200);
   textFont(letterAvenir, 50);
   fill(170, 236, 255);
   text("SING?", 150, 200);
   fill(42, 10, 255);
-  text("BYEEE!", 900, 600);
+  text("BYEEE!", 1100, 650);
   fill(206, 46, 255);
   text("SING?", 155, 205);
   fill(254, 10, 255);
-  text("BYEEE!", 905, 605);
+  text("BYEEE!", 1105, 655);
 
 
   //page 1
   if (currentPage == 1) {
-    background(0);
-    textFont(letterAvenir, 50);
-    fill(170, 236, 255);
-    text("choose a picture that can best describe your mood right now", 150, 200);
+    //background(247, 162, 238);
+    background(116, 27, 180);
+    textFont(letterAvenir, 60);
     fill(42, 10, 255);
-    text("choose a picture that can best describe your mood right now", 155, 205);
-    image(cali, 35, 300, 350, 233);
-    image(pizza, 420, 300, 350, 233);
-    image(seashell, 805, 300, 350, 233);
+    text("choose a picture that", 105, 150);
+    fill(254, 10, 255);
+    text("choose a picture that", 100, 155);
+    fill(42, 10, 255);
+    text("best describes your", 305, 230);
+    fill(254, 10, 255);
+    text("best describes your", 300, 235);
+    textFont(letterAvenir, 150);
+    fill(42, 10, 255);
+    text("MOOD", 920, 230);
+    fill(254, 10, 255);
+    text("MOOD", 925, 235);
+    image(cali, 60, 300, 400, 300);
+    image(pizza, 520, 300, 400, 300);
+    image(seashell, 980, 300, 400, 300);
+    textFont(letterAvenir, 50);
+    fill(232, 164, 180);
+    text("[RED]", 195, 680);
+    fill(224, 45, 87);
+    text("[RED]", 200, 685);
+    fill(242, 231, 2);
+    text("[YELLOW]", 615, 680);
+    fill(242, 199, 22);
+    text("[YELLOW]", 620, 685);
+    fill(152, 222, 132);
+    text("[GREEN]", 1100, 680);
+    fill(77, 178, 47);
+    text("[GREEN]", 1105, 685);
   }
 
   //page 2
@@ -99,7 +122,7 @@ void draw() {
     start = true;
     //float ratio = mouseX / (float) width;
     //movie1.jump(ratio * movie1.duration());
-    image(movie1, 0, 0);
+    image(movie1, 0, 0, 1440, 845);
     //return;
   }
 
@@ -108,7 +131,7 @@ void draw() {
     background(0);
     movie2.play();
     start = true;
-    image(movie2, 0, 0);
+    image(movie2, 0, 0, 1440, 845);
     //return;
   }
 
@@ -117,7 +140,7 @@ void draw() {
     background(0);
     movie3.play();
     start = true;
-    image(movie3, 0, 0);
+    image(movie3, 0, 0, 1440, 845);
     //return;
   }
 }
@@ -143,8 +166,18 @@ void serialEvent (Serial myPort) {
   if (currentPage == 1 && val == 5) {
     currentPage = 4;
   }
-  //else {
-  //  currentPage = 0;
+  
+  if (currentPage == 2 && val == 6) {
+    currentPage = 1;
+  }
+  
+  if (currentPage == 3 && val == 6) {
+    currentPage = 1;
+  }
+  
+  if (currentPage == 4 && val == 6) {
+    currentPage = 1;
+  }
   return;
 }
 
