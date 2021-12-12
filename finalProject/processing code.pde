@@ -12,7 +12,6 @@ PFont letterAvenir; //text font setup
 int currentPage = 0;
 PImage karaoke;
 PImage disco;
-boolean SING = true;
 //karaoke.start;
 
 //page 1: song list
@@ -67,52 +66,54 @@ void setup() {
 void draw() {
   //page 0
   image(karaoke, 0, 0, 1440, 845);
-  image(disco, 1050, 100, 200, 200);
-  textFont(letterAvenir, 50);
+  image(disco, 300, 100, 150, 150);
+  textFont(letterAvenir, 40);
   fill(170, 236, 255);
-  text("SING?", 150, 200);
+  text("SING?", 150, 690);
+  fill(255, 95, 255);
+  text("SING?", 155, 695);
   fill(42, 10, 255);
-  text("BYEEE!", 1100, 650);
-  fill(206, 46, 255);
-  text("SING?", 155, 205);
+  text("PRESS THE [BLUE BUTTON] TO START", 700, 690);
   fill(254, 10, 255);
-  text("BYEEE!", 1105, 655);
+  text("PRESS THE [BLUE BUTTON] TO START",705, 695);
 
 
   //page 1
   if (currentPage == 1) {
-    //background(247, 162, 238);
-    background(116, 27, 180);
+    background(153, 237, 231);
     textFont(letterAvenir, 60);
     fill(42, 10, 255);
-    text("choose a picture that", 105, 150);
+    text("choose a picture that", 105, 140);
     fill(254, 10, 255);
-    text("choose a picture that", 100, 155);
+    text("choose a picture that", 100, 145);
     fill(42, 10, 255);
-    text("best describes your", 305, 230);
+    text("best describes your", 305, 220);
     fill(254, 10, 255);
-    text("best describes your", 300, 235);
+    text("best describes your", 300, 225);
     textFont(letterAvenir, 150);
     fill(42, 10, 255);
-    text("MOOD", 920, 230);
+    text("MOOD", 920, 220);
     fill(254, 10, 255);
-    text("MOOD", 925, 235);
-    image(cali, 60, 300, 400, 300);
-    image(pizza, 520, 300, 400, 300);
-    image(seashell, 980, 300, 400, 300);
+    text("MOOD", 925, 225);
+    image(cali, 60, 290, 400, 300);
+    image(pizza, 520, 290, 400, 300);
+    image(seashell, 980, 290, 400, 300);
     textFont(letterAvenir, 50);
     fill(232, 164, 180);
-    text("[RED]", 195, 680);
+    text("[RED]", 195, 670);
     fill(224, 45, 87);
-    text("[RED]", 200, 685);
+    text("[RED]", 200, 675);
     fill(242, 231, 2);
-    text("[YELLOW]", 615, 680);
+    text("[YELLOW]", 615, 670);
     fill(242, 199, 22);
-    text("[YELLOW]", 620, 685);
+    text("[YELLOW]", 620, 675);
     fill(152, 222, 132);
-    text("[GREEN]", 1100, 680);
+    text("[GREEN]", 1100, 670);
     fill(77, 178, 47);
-    text("[GREEN]", 1105, 685);
+    text("[GREEN]", 1105, 675);
+    textFont(letterAvenir, 30);
+    fill(247, 162, 238);
+    text("*IF YOU WANNA GO BACK TO THE MENU, PRESS [GREY BUTTON]*", 550, 750);
   }
 
   //page 2
@@ -169,14 +170,17 @@ void serialEvent (Serial myPort) {
   
   if (currentPage == 2 && val == 6) {
     currentPage = 1;
+    movie1.stop();
   }
   
   if (currentPage == 3 && val == 6) {
     currentPage = 1;
+    movie2.stop();
   }
   
   if (currentPage == 4 && val == 6) {
     currentPage = 1;
+    movie3.stop();
   }
   return;
 }
