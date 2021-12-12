@@ -1,10 +1,11 @@
 import processing.serial.*;
 Serial myPort;  // Create object from Serial class
-String val;     // Data received from the serial port
-//import processing.video.*; //load karaokue videos
-//Movie movie1; //Declare a Video object.
-//Movie movie2;
-//Movie movie3;
+int val;     // Data received from the serial port
+import processing.video.*; //load karaokue videos
+Movie movie1; //Declare a Video object.
+Movie movie2;
+Movie movie3;
+boolean start = true;
 
 //page 0: home screen
 PFont letterAvenir; //text font setup
@@ -35,10 +36,10 @@ boolean play2 = true;
 void setup() {
   printArray(Serial.list());
   String portName = Serial.list()[3];
-  myPort = new Serial(this, Serial.list()[3], 9600);
+  myPort = new Serial(this, portName, 9600);
 
   //page 0
-  size (1200, 720);
+  size (1440, 845);
   printArray(PFont.list());
   letterAvenir = loadFont("AvenirNextCondensed-HeavyItalic-48.vlw");
   karaoke = loadImage("karaoke.jpg");
@@ -50,25 +51,19 @@ void setup() {
 
   //page 2
   background(10, 10, 200);
-  //movie1 = new Movie(this, "California Dreamin'.mp4");// Initialize Movie object
+  movie1 = new Movie(this, "California Dreamin'.mp4");// Initialize Movie object
   //movie1.loop();
 
   //page 3
   background(0);
-  //movie2 = new Movie(this, "Blinding Lights'.mp4");// Initialize Movie object
+  movie2 = new Movie(this, "Blinding Lights.mp4");// Initialize Movie object
   //movie2.loop();
 
   //page 4
   background(122, 121, 200);
-  //movie3 = new Movie(this, "XMAS'.mp4");// Initialize Movie object
+  movie3 = new Movie(this, "XMAS.mp4");// Initialize Movie object
   //movie3.loop();
 }
-
-//void movieEvent(Movie movie) {
-//  movie.read();
-//movie2.read();
-//movie3.read();
-//}
 
 void draw() {
   //page 0
@@ -83,6 +78,7 @@ void draw() {
   fill(254, 10, 255);
   text("BYEEE!", 905, 605);
 
+
   //page 1
   if (currentPage == 1) {
     background(0);
@@ -91,56 +87,67 @@ void draw() {
     text("choose a picture that can best describe your mood right now", 150, 200);
     fill(42, 10, 255);
     text("choose a picture that can best describe your mood right now", 155, 205);
-    image(cali, 50, 0, 150, 100);
-    image(pizza, 250, 150, 150, 100);
-    image(seashell, 550, 200, 150, 100);
+    image(cali, 35, 300, 350, 233);
+    image(pizza, 420, 300, 350, 233);
+    image(seashell, 805, 300, 350, 233);
   }
 
   //page 2
   if (currentPage == 2) {
     background(0);
+    movie1.play();
+    start = true;
     //float ratio = mouseX / (float) width;
     //movie1.jump(ratio * movie1.duration());
-    //image(movie1, 0, 0);
-    return;
+    image(movie1, 0, 0);
+    //return;
   }
-
 
   //page 3
   if (currentPage == 3) {
     background(0);
-    //image(movie2, 0, 0);
-    return;
+    movie2.play();
+    start = true;
+    image(movie2, 0, 0);
+    //return;
   }
 
   //page 4
   if (currentPage == 4) {
     background(0);
-    //image(movie3, 0, 0);
-    return;
+    movie3.play();
+    start = true;
+    image(movie3, 0, 0);
+    //return;
   }
 }
 
-void serialEvent(Serial myPort) {
+void serialEvent (Serial myPort) {
   if (myPort.available() > 0) {
-    val = myPort.readStringUntil('\n');
+    val = myPort.read();
+    println(val);
   }
-  println(val); //print it out
-  if (currentPage == 0 && val == "2") {
-    myPort.write('2');
-    println("2");
+
+  if (currentPage == 0 && val == 1) {
     currentPage = 1;
-  } else if (currentPage == 1 && val == "3") {
-    setup();
-    currentPage = 2;
-    return;
-  } else if (currentPage == 1 && val == "4") {
-    setup();
-    currentPage = 3;
-    return;
-  } else if (currentPage == 1 && val == "5") {
-    setup();
-    currentPage = 4;
-    return;
   }
+
+  if (currentPage == 1 && val == 3) {
+    currentPage = 2;
+  }
+
+  if (currentPage == 1 && val == 4) {
+    currentPage = 3;
+  }
+
+  if (currentPage == 1 && val == 5) {
+    currentPage = 4;
+  }
+  //else {
+  //  currentPage = 0;
+  return;
+}
+
+void movieEvent(Movie movie) {
+  movie.read();
 }
